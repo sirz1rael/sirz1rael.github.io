@@ -13,13 +13,13 @@
     <title>sirz1rael's portfolio</title>
   </head>
   <body onload="handleHidden()">
+    <input type="checkbox" class="checkbox" />
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
     <nav class="vertical-navigation" aria-hidden="true">
-      <input type="checkbox" class="checkbox" checked />
-      <div class="hamburger-lines">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-      </div>
       <div class="vertical-navigation-container">
         <div class="items">
           <div class="head">
@@ -41,18 +41,105 @@
         </div>
       </div>
     </nav>
-    <script>
-      const set_aria_hidden = () => {
-        const nav_container = document.getElementsByClassName(
-          "vertical-navigation"
-        )[0];
-        return nav_container;
-      };
 
-      const handleHidden = () => {
-        console.log(set_aria_hidden().ariaHidden);
-        set_aria_hidden().ariaHidden = false;
-      };
+    <main class="home">
+      <header class="introduction">
+        <p>Hello there, my name is</p>
+        <span class="name">
+          <strong>Nikita</strong>
+          <span class="desc">aka sirz1rael</span>
+        </span>
+      </header>
+
+      <article class="description">
+        <section class="professional-profile">
+          <h2>Professional Summary</h2>
+          <p>
+            As a meticulous and growth-driven junior software engineer, I
+            specialize in architecting full-stack solutions using
+            <strong lang="en">FastAPI</strong> (Python) for robust backend
+            systems and <strong lang="en">React</strong> (TypeScript/JavaScript)
+            for dynamic frontend interfaces. My technical foundation is
+            fortified by advanced studies in <strong lang="en">C/C++</strong>,
+            focusing on low-level system programming and performance
+            optimization.
+          </p>
+        </section>
+
+        <section class="key-competencies">
+          <h2>Key Competencies</h2>
+          <dl class="competency-list">
+            <div class="competency-item">
+              <dt><strong>Backend Engineering</strong></dt>
+              <dd>Designed scalable RESTful APIs with FastAPI</dd>
+              <dd>Integrated middleware and JWT authentication</dd>
+              <dd>PostgreSQL/Redis optimization for high-throughput</dd>
+            </div>
+            <div class="competency-item">
+              <dt><strong>Frontend Engineering</strong></dt>
+              <dd>Built responsive UIs with React components</dd>
+              <dd>State management (Redux/Zustand)</dd>
+              <dd>Modern hooks-based patterns</dd>
+            </div>
+            <div class="competency-item">
+              <dt><strong>Systems programming</strong></dt>
+              <dd>Performance-critical C/C++ modules</dd>
+              <dd>Multithreading and memory optimization</dd>
+              <dd>Python C extensions development</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="core-attributes">
+          <h2>Core Attributes</h2>
+          <div class="attribute-grid">
+            <div>
+              <h3>Precision-Oriented</h3>
+              <p>Exceptional time management and edge-case mitigation</p>
+            </div>
+            <div>
+              <h3>Adaptive Learner</h3>
+              <p>Expanding expertise in distributed systems (gRPC, RabbitMQ)</p>
+            </div>
+            <div>
+              <h3>Collaborative Mindset</h3>
+              <p>Agile development with Jira/Git and test-driven approach</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="future-focus">
+          <h2>Future Focus</h2>
+          <ul class="future-items">
+            <li>Exploring Rust for memory-safe systems programming</li>
+            <li>WebAssembly (WASM) integration research</li>
+            <li>Distributed systems architecture patterns</li>
+          </ul>
+        </section>
+
+        <blockquote class="value-proposition">
+          <p>
+            A fusion of modern web development fluency and systems-thinking
+            rigor, committed to creating efficient and maintainable solutions
+            where computational power meets user-centric design.
+          </p>
+        </blockquote>
+      </article>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const checkbox = document.querySelector(".checkbox");
+        const nav = document.querySelector(".vertical-navigation");
+
+        checkbox.addEventListener("change", (e) => {
+          nav.setAttribute("aria-hidden", !e.target.checked);
+        });
+
+        // Update year automatically
+        document.querySelector(
+          ".nav-footer"
+        ).textContent = `© ${new Date().getFullYear()}. All rights reserved.`;
+      });
     </script>
   </body>
 </html>
