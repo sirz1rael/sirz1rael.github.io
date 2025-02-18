@@ -1,0 +1,119 @@
+:root {
+  --background: #474448;
+  --font-accent: #F1F0EA;
+  --main-accent: rgba(45, 35, 46, 0.33);
+  --secondary-accent: #534B52;
+  --just-an-accent: #E0DDCF;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  font-size: 16pt;
+}
+
+.vertical-navigation {
+  background-image: url('/nav-bg.jpg');
+  height: 100vh;
+  width: 30%;
+  position: relative;
+}
+
+.vertical-navigation[aria-hidden="true"] {
+  left: -1000px;
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.vertical-navigation[aria-hidden="false"] {
+  left: 0;
+  transition: all 1s cubic-bezier(0.3, 1, 0.2, 1);
+}
+
+.vertical-navigation-container {
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: relative;
+}
+
+.head {
+  width: 100%;
+  user-select: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.head:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.intro {
+  color: var(--font-accent);
+  font-size: 30pt;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
+.slogan {
+  color: var(--font-accent);
+  opacity: 30%;
+  max-width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: smaller;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.link {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.link:hover {
+  background-color: var(--font-accent);
+  width: 80%;
+  transform: scale(1.25, 1.25);
+  /* border-radius: 999px; */
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.link a:hover {
+  color: var(--background);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.link a {
+  display: block;
+  padding: 0.75rem;
+  color: var(--font-accent);
+  text-decoration: none;
+}
+
+.nav-footer {
+  color: var(--font-accent);
+  font-size: small;
+  width: 100%;
+  text-align: center;
+  opacity: 50%;
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
