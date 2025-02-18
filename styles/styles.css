@@ -32,17 +32,11 @@ body {
 
 .vertical-navigation-container {
   background-image: url('/assets/nav-bg.jpg');
-  backdrop-filter: blur(20px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  position: relative;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .items {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
