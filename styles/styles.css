@@ -6,6 +6,8 @@
   --just-an-accent: #E0DDCF;
 }
 
+
+
 body {
   margin: 0;
   padding: 0;
@@ -33,6 +35,33 @@ body {
 .vertical-navigation-container {
   background-image: url('/assets/nav-bg.jpg');
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (max-width: 240px) {
+  .vertical-navigation {
+    width: 100%;
+  }
+}
+@media (min-width: 241px) and (max-width: 319px) {
+  .vertical-navigation {
+    width: 75%;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .vertical-navigation {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199) {
+  .vertical-navigation {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vertical-navigation {
+    width: 30%;
+  }
 }
 
 .items {
@@ -95,7 +124,7 @@ body {
   width: 32px;
   position: absolute;
   top: 17px;
-  left: 20px;
+  left: 1.5vw;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -124,14 +153,23 @@ body {
 .vertical-navigation .hamburger-lines .line3 {
   transform-origin: 0% 100%;
   transform: rotate(-45deg);
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .vertical-navigation input[type="checkbox"]:checked ~ .vertical-navigation-container {
-  transform: translateX(-85%);
+  transform: translateX(-78%);
+  width: 75%;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.vertical-navigation input[type="checkbox"]:checked ~ .hamburger-lines {
+  transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
 .vertical-navigation input[type="checkbox"]:checked ~ .vertical-navigation-container .items .head {
+  transform: translateX(-700px);
+  transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.vertical-navigation input[type="checkbox"]:checked ~ .vertical-navigation-container .items .nav-footer {
   transform: translateX(-700px);
   transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -156,33 +194,6 @@ body {
   /* filter: invert(100%); */
 }
 
-@media only screen and (max-width: 1201px) {
-  .vertical-navigation {
-    width: 30%;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .vertical-navigation {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  .vertical-navigation {
-    width: 50%;
-  }
-}
-@media only screen and (max-width: 544px) {
-  .vertical-navigation {
-    width: 60%;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .vertical-navigation {
-    width: 80%;
-  }
-}
 
 .links {
   display: flex;
