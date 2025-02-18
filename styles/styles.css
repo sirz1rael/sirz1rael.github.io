@@ -11,7 +11,7 @@
 /* Base styles */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'JetBrains Mono', sans-serif;
   font-size: 1rem;
   color: var(--font-accent);
   background: var(--background);
@@ -42,12 +42,24 @@ body {
 .items {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 }
 
 .head {
   padding: 2rem 1rem;
   text-align: center;
+  margin-top: auto;
+}
+
+.nav-body {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.nav-footer {
+  margin-bottom: 2rem;
+  margin-top: auto;
 }
 
 .intro {
@@ -147,12 +159,12 @@ body {
 .introduction {
   display: block;
   font-size: 2em;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .introduction p {
   display: block;
-  margin-bottom: -1.5rem;
+  margin-bottom: -0.5rem;
   opacity: 50%;
 }
 
@@ -165,7 +177,7 @@ body {
 .desc {
   font-size: 1.25rem;
   opacity: 0.8;
-  margin-left: 0.5rem;
+  margin-left: -1rem;
 }
 
 /* Competencies */
