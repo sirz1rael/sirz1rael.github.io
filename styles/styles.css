@@ -42,6 +42,7 @@ body {
   justify-content: space-between;
   height: 100vh;
   position: relative;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .head {
@@ -126,23 +127,33 @@ body {
   transition: transform 0.4s ease-in-out;
 }
 .vertical-navigation input[type="checkbox"]:checked ~ .vertical-navigation-container {
-  transform: translateX(-600px);
+  transform: translateX(-85%);
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.vertical-navigation input[type="checkbox"]:checked ~ .vertical-navigation-container .items .head {
+  transform: translateX(-700px);
+  transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.vertical-navigation input[type="checkbox"]:checked ~ .vertical-navigation-container .items .links {
+  transform: translateX(-700px);
+  transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .vertical-navigation input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
   transform: rotate(0deg);
-  filter: invert(100%);
+  /* filter: invert(100%); */
 }
 
 .vertical-navigation input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
   transform: scaleY(1);
-  filter: invert(100%);
+  /* filter: invert(100%); */
 }
 
 .vertical-navigation input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   transform: rotate(0deg);
-  filter: invert(100%);
+  /* filter: invert(100%); */
 }
 
 @media only screen and (max-width: 1201px) {
@@ -180,6 +191,7 @@ body {
   padding: 0;
   list-style-type: none;
   text-align: center;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .link {
