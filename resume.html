@@ -3,9 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://avatars.githubusercontent.com/u/150961457?s=400&u=b5364c37fd1d751c5211fee14584ce5788694560&v=4"
+      type="image/x-icon"
+    />
+    <title>sirz1rael's resume</title>
   </head>
   <body>
-    work in progress....
+    <input type="checkbox" class="checkbox" />
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
+    <nav class="vertical-navigation" aria-hidden="true">
+      <div class="vertical-navigation-container">
+        <div class="items">
+          <div class="head">
+            <div class="intro">SIRZ1RAEL</div>
+            <div class="slogan">Making stuff pretty to use with love :3</div>
+          </div>
+          <div class="nav-body">
+            <ul class="links">
+              <li>
+                <a class="link" href="/">Home</a>
+              </li>
+              <li><a class="link" href="/projects">Projects</a></li>
+              <li><a class="link" href="/contacts">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="nav-footer">2025. All rights reserved.</div>
+        </div>
+      </div>
+    </nav>
+    <main class="home">
+      <embed
+        src="https://example.com"
+        width="100%"
+        style="height: 85vh"
+        type="application/pdf"
+      />
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const checkbox = document.querySelector(".checkbox");
+        const nav = document.querySelector(".vertical-navigation");
+
+        checkbox.addEventListener("change", (e) => {
+          nav.setAttribute("aria-hidden", !e.target.checked);
+        });
+
+        // Update year automatically
+        document.querySelector(
+          ".nav-footer"
+        ).textContent = `© ${new Date().getFullYear()}. All rights reserved.`;
+      });
+    </script>
   </body>
 </html>
