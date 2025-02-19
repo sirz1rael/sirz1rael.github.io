@@ -3,9 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://avatars.githubusercontent.com/u/150961457?s=400&u=b5364c37fd1d751c5211fee14584ce5788694560&v=4"
+      type="image/x-icon"
+    />
+    <title>sirz1rael's resume</title>
   </head>
   <body>
-    work in progress...
+    <input type="checkbox" class="checkbox" />
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
+    <nav class="vertical-navigation" aria-hidden="true">
+      <div class="vertical-navigation-container">
+        <div class="items">
+          <div class="head">
+            <div class="intro">SIRZ1RAEL</div>
+            <div class="slogan">Making stuff pretty to use with love :3</div>
+          </div>
+          <div class="nav-body">
+            <ul class="links">
+              <li>
+                <a class="link" href="/">Home</a>
+              </li>
+              <li><a class="link" href="/projects">Projects</a></li>
+              <li><a class="link active" href="/contacts">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="nav-footer">2025. All rights reserved.</div>
+        </div>
+      </div>
+    </nav>
+    <main class="home">
+      <header class="introduction">
+        <p>Hello there, this is my</p>
+        <span class="name">
+          <strong>contacts</strong>
+          <span class="desc">please :></span>
+          <span><a class="desc-link" href="/resume">Resume / About me</a></span>
+        </span>
+        <hr />
+      </header>
+      <div class="attribute-grid">
+        <div class="grid-item">
+          <h3>Telegram</h3>
+          <p>
+            <a href="https://t.me/+Dh4k1ILRh0ExODNi"
+              >https://t.me/+Dh4k1ILRh0ExODNi</a
+            >
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3>GitHub</h3>
+          <p>
+            <a href="https://github.com/sirz1rael"
+              >https://github.com/sirz1rael</a
+            >
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3>E-Mail</h3>
+          <p>
+            <a href="mailto:nkurakin.cl@gmail.com">nkurakin.cl@gmail.com</a>
+          </p>
+          <p>
+            <a href="mailto:nikita.kurakin99u7@gmail.com"
+              >nikita.kurakin99u7@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const checkbox = document.querySelector(".checkbox");
+        const nav = document.querySelector(".vertical-navigation");
+
+        checkbox.addEventListener("change", (e) => {
+          nav.setAttribute("aria-hidden", !e.target.checked);
+        });
+
+        // Update year automatically
+        document.querySelector(
+          ".nav-footer"
+        ).textContent = `© ${new Date().getFullYear()}. All rights reserved.`;
+      });
+    </script>
   </body>
 </html>

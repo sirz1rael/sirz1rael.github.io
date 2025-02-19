@@ -237,6 +237,21 @@ body {
   margin-bottom: 1rem;
 }
 
+.attribute-grid p a {
+  display: block;
+  text-decoration: none;
+  background-color: var(--background);
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--font-accent);
+  transition: var(--transition);
+}
+.attribute-grid p:hover a:hover {
+  filter: invert(100%);
+  transform: scale(1.05, 1.05);
+  transition: var(--transition);
+}
+
 .value-proposition {
   border-left: 3px solid var(--just-an-accent);
   padding-left: 1.5rem;
