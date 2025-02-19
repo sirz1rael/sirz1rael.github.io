@@ -108,23 +108,23 @@ body {
 .line2 { top: 9px; }
 .line3 { top: 18px; }
 
-.checkbox ~ .hamburger-lines .line1 {
+.checkbox:checked  ~ .hamburger-lines .line1 {
   transform: rotate(45deg) translate(6.5px, 6px);
 }
-.checkbox ~ .hamburger-lines .line2 {
+.checkbox:checked ~ .hamburger-lines .line2 {
   opacity: 0;
 }
-.checkbox ~ .hamburger-lines .line3 {
+.checkbox:checked ~ .hamburger-lines .line3 {
   transform: rotate(-45deg) translate(6.5px, -6px);
 }
 
-.checkbox:checked ~ .hamburger-lines .line1 {
+.checkbox ~ .hamburger-lines .line1 {
   transform: rotate(0deg);
 }
-.checkbox:checked ~ .hamburger-lines .line2 {
+.checkbox ~ .hamburger-lines .line2 {
   opacity: 1;
 }
-.checkbox:checked ~ .hamburger-lines .line3 {
+.checkbox ~ .hamburger-lines .line3 {
   transform: rotate(0deg);
 }
 
