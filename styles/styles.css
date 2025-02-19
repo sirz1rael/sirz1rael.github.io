@@ -170,14 +170,39 @@ body {
 
 .name {
   font-size: 4rem;
-  display: block;
   margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.name strong {
+  margin-left: 0;
 }
 
 .desc {
   font-size: 1.25rem;
   opacity: 0.8;
-  margin-left: -1rem;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.desc-link {
+  text-decoration: none;
+  color: var(--font-accent);
+  font-size: 1.25rem;
+  text-align: justify;
+  text-wrap-mode: wrap;
+  padding: 1rem;
+}
+
+.desc-link:hover {
+  text-decoration: underline;
+  color: var(--font-accent);
+}
+
+.core-attributes h2 {
+  margin: 0;
 }
 
 /* Competencies */
@@ -195,9 +220,21 @@ body {
 
 .attribute-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.5rem ;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.attribute-grid div {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.attribute-grid h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .value-proposition {
@@ -220,10 +257,20 @@ body {
   .name {
     font-size: 2rem;
   }
+
+  .desc-link {
+    font-size: 1rem;
+  }
   
   .hamburger-lines {
     top: 1rem;
     left: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .desc-link {
+    font-size: 0.9rem;
   }
 }
 
