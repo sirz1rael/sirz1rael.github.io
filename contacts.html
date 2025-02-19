@@ -24,7 +24,7 @@
       <span class="line line2"></span>
       <span class="line line3"></span>
     </div>
-    <nav class="vertical-navigation" aria-hidden="true">
+    <nav class="vertical-navigation" aria-hidden="false">
       <div class="vertical-navigation-container">
         <div class="items">
           <div class="head">
@@ -90,7 +90,7 @@
         const nav = document.querySelector(".vertical-navigation");
 
         checkbox.addEventListener("change", (e) => {
-          nav.setAttribute("aria-hidden", !e.target.checked);
+          nav.setAttribute("aria-hidden", e.target.checked);
         });
 
         // Update year automatically
